@@ -1,28 +1,32 @@
+console.log("js/main.js");
 // var api;
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function(jQuery) {
     // DOM loaded
 
-    // $(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner").css( "height", "100vh !important" );
+    // jQuery(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner").css( "height", "100vh !important" );
 
-    // $(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner").css( "height", $(window).height() + "px" );
+    // jQuery(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner").css( "height", jQuery(window).height() + "px" );
 
-    // $(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner, .ug-gallery-wrapper .ug-slider-wrapper").css( "height", $(window).height() + "px!important" );
+    // jQuery(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner, .ug-gallery-wrapper .ug-slider-wrapper").css( "height", jQuery(window).height() + "px!important" );
 
-    $(window).load(function(){
-        // $("#unitegallery_1_1").unitegallery().resize($(window).width(),$(window).height());
-        $('html, body').delay( 200 ).animate({
-            scrollTop: $(".unite-gallery").offset().top
+    jQuery(window).load(function(){
+        // jQuery("#unitegallery_1_1").unitegallery().resize(jQuery(window).width(),jQuery(window).height());
+
+        console.log( jQuery(".unite-gallery").offset().top );
+
+        jQuery('html, body').delay( 200 ).animate({
+            scrollTop: jQuery(".unite-gallery").offset().top
         }, 1200, "easeInOutCubic");
 
     });
 
-var wWidth = $(window).width();
-$(window).on('resize', function(){
-    // if (  wWidth != $(window).width() ) {
+var wWidth = jQuery(window).width();
+jQuery(window).on('resize', function(){
+    // if (  wWidth != jQuery(window).width() ) {
         // Set new height of gallery wrapper slider
-        // var win = $(this); // this = window
-        $(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner").css( "height", $(window).height() + "px" );
+        // var win = jQuery(this); // this = window
+        jQuery(".ug-gallery-wrapper, .ug-slider-wrapper, .ug-slider-inner").css( "height", jQuery(window).height() + "px" );
     // }
 
 });
